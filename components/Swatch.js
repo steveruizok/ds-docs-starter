@@ -1,16 +1,26 @@
 import React from "react";
-import { Flex } from "rebass";
+import { Panel, Code, Box } from "rebass";
 
-const Swatch = ({ color, bg }) => (
-  <Flex
-    bg={bg}
-    color={color}
-    css={{ height: "96px", width: "128px" }}
-    alignItems="flex-end"
-    p={8}
-  >
-    {bg}
-  </Flex>
+const Swatch = ({ cssvariable, bg }) => (
+	<Panel borderColor="#eee">
+		<Box
+			bg={bg}
+			css={{ height: "96px", width: "100%" }}
+			alignItems="flex-end"
+			p={8}
+		/>
+		<Panel.Footer bg="#fafafa">
+			<Code>{bg}</Code>
+		</Panel.Footer>
+		{cssvariable && (
+			<Panel.Footer bg="#fafafa">
+				<Code>
+					--var(
+					{cssvariable})
+				</Code>
+			</Panel.Footer>
+		)}
+	</Panel>
 );
 
 export default Swatch;

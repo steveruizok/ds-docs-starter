@@ -1,8 +1,10 @@
 import Layout from '../components/Layout'
-import { Donut } from 'rebass'
+import { Button } from 'rebass'
 
 export default Layout
 
-# Introduction
+# About
 
-...
+---
+
+This design system was...
