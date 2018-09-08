@@ -11,7 +11,7 @@ __NEXT_REGISTER_PAGE('/_document', function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rebass__ = __webpack_require__("./node_modules/rebass/dist/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rebass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rebass__);
-var _jsxFileName = "/Users/stephenruiz/Documents/GitHub/ds-docs-starter/components/Sidebar.js";
+var _jsxFileName = "/Users/stephenruiz/GitHub/ds-docs-starter/components/Sidebar.js";
 
 
 
@@ -224,8 +224,9 @@ var ListSection = function ListSection(props) {
       fileName: _jsxFileName,
       lineNumber: 102
     }
-  }, props.title), props.links.map(function (l) {
+  }, props.title), props.links.map(function (l, index) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SidebarLink, {
+      key: "SidebarLink_" + index,
       href: l.href,
       __source: {
         fileName: _jsxFileName,
@@ -16437,7 +16438,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_config__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components__ = __webpack_require__("./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Sidebar__ = __webpack_require__("./components/Sidebar.js");
-var _jsxFileName = "/Users/stephenruiz/Documents/GitHub/ds-docs-starter/pages/_document.js";
+var _jsxFileName = "/Users/stephenruiz/GitHub/ds-docs-starter/pages/_document.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }

@@ -67,101 +67,81 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./components/markdown.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__rebass_markdown__ = __webpack_require__("@rebass/markdown");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__rebass_markdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__rebass_markdown__);
-
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0__rebass_markdown___default()());
-
-/***/ }),
-
-/***/ "./pages/_app.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mdx_js_tag__ = __webpack_require__("@mdx-js/tag");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mdx_js_tag___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__mdx_js_tag__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rebass__ = __webpack_require__("rebass");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rebass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rebass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_markdown__ = __webpack_require__("./components/markdown.js");
-var _jsxFileName = "/Users/stephenruiz/Documents/GitHub/ds-docs-starter/pages/_app.js";
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
-  var Component = _ref.Component,
-      pageProps = _ref.pageProps;
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__mdx_js_tag__["MDXProvider"], {
-    components: __WEBPACK_IMPORTED_MODULE_3__components_markdown__["a" /* default */],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_rebass__["Provider"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    }
-  }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({}, pageProps, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    }
-  }))));
-});
-
-/***/ }),
-
-/***/ 0:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./pages/_app.js");
-
-
-/***/ }),
-
-/***/ "@mdx-js/tag":
-/***/ (function(module, exports) {
-
-module.exports = require("@mdx-js/tag");
-
-/***/ }),
-
-/***/ "@rebass/markdown":
-/***/ (function(module, exports) {
-
-module.exports = require("@rebass/markdown");
-
-/***/ }),
-
-/***/ "react":
+/******/ ([
+/* 0 */
 /***/ (function(module, exports) {
 
 module.exports = require("react");
 
 /***/ }),
-
-/***/ "rebass":
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = require("rebass");
 
-/***/ })
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
 
-/******/ });
-//# sourceMappingURL=_app.js.map
+module.exports = require("@mdx-js/tag");
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(7);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: external "react"
+var external__react_ = __webpack_require__(0);
+var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
+
+// EXTERNAL MODULE: external "@mdx-js/tag"
+var tag_ = __webpack_require__(2);
+var tag__default = /*#__PURE__*/__webpack_require__.n(tag_);
+
+// EXTERNAL MODULE: external "rebass"
+var external__rebass_ = __webpack_require__(1);
+var external__rebass__default = /*#__PURE__*/__webpack_require__.n(external__rebass_);
+
+// EXTERNAL MODULE: external "@rebass/markdown"
+var markdown_ = __webpack_require__(8);
+var markdown__default = /*#__PURE__*/__webpack_require__.n(markdown_);
+
+// CONCATENATED MODULE: ./components/markdown.js
+
+/* harmony default export */ var markdown = (markdown__default()());
+// CONCATENATED MODULE: ./pages/_app.js
+
+
+
+
+/* harmony default export */ var _app = __webpack_exports__["default"] = (function (_ref) {
+  var Component = _ref.Component,
+      pageProps = _ref.pageProps;
+  return external__react__default.a.createElement(tag_["MDXProvider"], {
+    components: markdown
+  }, external__react__default.a.createElement(external__rebass_["Provider"], null, external__react__default.a.createElement(Component, pageProps)));
+});
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("@rebass/markdown");
+
+/***/ })
+/******/ ]);
