@@ -14,6 +14,13 @@ const knobsA = {
     label: "Name",
     default: "Steve"
   },
+  myDate: {
+    type: "date",
+    label: "Date",
+    min: "1986-01-01",
+    max: "1986-01-11",
+    default: "1986-01-09"
+  },
   myNumber: {
     type: "number",
     label: "Age",
@@ -71,7 +78,14 @@ export const RhymeA = props => (
       return (
         <Box color={state.myColor} bg={state.myBoolean ? "#333" : "#FFF"}>
           <Text textAlign={state.mySegment}>
-            Hi, I'm {state.myText}. I'm {state.myNumber} years old.
+            Hi, I'm {state.myText}. I'm {state.myNumber} years old. I was born
+            on{" "}
+            {new Date(state.myDate).toLocaleDateString("en-gb", {
+              month: "long",
+              day: "numeric",
+              year: "numeric"
+            })}
+            .
           </Text>
           <Text textAlign={state.mySegment} color={state.myEnum}>
             This is my favourite color.

@@ -18,6 +18,14 @@ Here's a more realistic example.
 
 <RhymeB name="Rhyme B"/>
 
+```javascript
+<Button />
+```
+
 And one where responsiveness matters a bit more.
 
 <RhymeC name="Rhyme C"/>
+
+```javascript
+<Text children="Hello world" />
+```

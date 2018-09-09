@@ -13165,6 +13165,15 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
+var theme = {
+  colors: {
+    gray: "#eeeeee",
+    blue: "#aaaaaa",
+    black: "#555555",
+    white: "#ffffff",
+    darken: "#aaaaaa"
+  }
+};
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
@@ -13172,17 +13181,18 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
     components: __WEBPACK_IMPORTED_MODULE_3__components_markdown__["a" /* default */],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 18
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_rebass__["Provider"], {
+    theme: theme,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 19
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Component, _extends({}, pageProps, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 20
     }
   }))));
 });

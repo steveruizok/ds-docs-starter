@@ -1,24 +1,19 @@
 import {
   Panel,
   Tabs,
-  Pre,
-  Code,
   Tab,
   Textarea,
   Text,
   Switch,
   Heading,
   Button,
-  ButtonOutline,
   Small,
   Slider,
-  Group,
   Flex,
   Box,
   Label,
   Input,
-  Select,
-  Checkbox
+  Select
 } from "rebass";
 import React from "react";
 
@@ -80,13 +75,12 @@ class Rhyme extends React.Component {
     let ref = React.createRef();
     const key = knob.name;
 
-    const change = ev => {
+    const handleChange = throttle(ev => {
+      console.log(ev.target.value);
       this.setState({ [knob.name]: ev.target.value });
-    };
+    }, 250);
 
-    const handleChange = throttle(change, 150);
-
-    const defaultValue = this.state[knob.name];
+    const currentValue = this.state[knob.name];
 
     switch (knob.type) {
       // TEXT
@@ -95,7 +89,7 @@ class Rhyme extends React.Component {
           <Input
             key={key}
             onChange={handleChange}
-            defaultValue={defaultValue}
+            defaultValue={currentValue}
           />
         );
       // TEXTAREA
@@ -104,21 +98,33 @@ class Rhyme extends React.Component {
           <Textarea
             key={key}
             onChange={handleChange}
-            defaultValue={defaultValue}
+            defaultValue={currentValue}
+          />
+        );
+      // DATE
+      case "date":
+        return (
+          <input
+            key={key}
+            type="date"
+            min={knob.min}
+            max={knob.max}
+            onChange={handleChange}
+            value={currentValue}
           />
         );
       // NUMBER
       case "number":
         return [
           <Text key={key + "_slider_currentValue"} textAlign="center">
-            <Small key={key + "_slider_max"}>{defaultValue}</Small>
+            <Small key={key + "_slider_max"}>{currentValue}</Small>
           </Text>,
           <Slider
             key={key}
             min={knob.min}
             max={knob.max}
             onChange={handleChange}
-            defaultValue={defaultValue}
+            defaultValue={currentValue}
           />,
           <Flex key={key + "_slider_values"} justifyContent="space-between">
             <Small key={key + "_slider_min"}>{knob.min}</Small>
@@ -128,7 +134,7 @@ class Rhyme extends React.Component {
       // ENUMERATED VALUE
       case "enum":
         return (
-          <Select key={key} onChange={handleChange} defaultValue={defaultValue}>
+          <Select key={key} onChange={handleChange} defaultValue={currentValue}>
             {knob.options.map((o, index) => (
               <option key={key + "_option_" + index} value={o}>
                 {knob.labels[index]}
@@ -139,36 +145,31 @@ class Rhyme extends React.Component {
       // SEGMENTED ENUMERATED VALUE
       case "segment":
         return (
-          <Group key={key}>
-            {knob.options.map((o, index) => {
-              {
-                let Type = ButtonOutline;
-                if (defaultValue === o) {
-                  Type = Button;
-                }
-                return (
-                  <Type
-                    ml={"-2px"}
-                    key={key + "_option_" + index}
-                    onClick={ev => {
-                      this.setState({ [knob.name]: o });
-                    }}
-                    children={knob.labels[index]}
-                  />
-                );
-              }
-            })}
-          </Group>
+          <Box>
+            {knob.options.map((o, index) => (
+              <Button
+                color={currentValue === o ? "white" : "darken"}
+                bg={currentValue === o ? "black" : "gray"}
+                mr={2}
+                key={key + "_option_" + index}
+                onClick={ev => {
+                  this.setState({ [knob.name]: o });
+                }}
+                children={knob.labels[index]}
+              />
+            ))}
+          </Box>
         );
       // BOOLEAN
       case "boolean":
         return (
           <Switch
+            color={currentValue ? "black" : "darken"}
             key={key}
             onClick={ev => {
-              this.setState({ [knob.name]: !defaultValue });
+              this.setState({ [knob.name]: !currentValue });
             }}
-            checked={defaultValue}
+            checked={currentValue}
           />
         );
       // COLOR
@@ -180,11 +181,19 @@ class Rhyme extends React.Component {
             type="color"
             name={knob.name}
             onChange={handleChange}
-            value={defaultValue}
+            value={currentValue}
+            style={{
+              padding: 0,
+              margin: 0,
+              borderWidth: 0,
+              height: "32px",
+              width: "56px",
+              borderColor: "none",
+              backgroundColor: "none"
+            }}
           />
         ];
       // TODO: IMAGE
-      // TODO: DATE
       default:
         return <span>Nothing for that type.</span>;
     }
@@ -216,13 +225,11 @@ class Rhyme extends React.Component {
   render() {
     return (
       <div>
+        <Heading fontSize="4" my={3}>
+          {this.props.name}
+        </Heading>
         <Panel width="100%">
-          <Panel.Header>
-            <Flex alignItems="center" justifyContent="space-between">
-              <Heading fontSize="4">{this.props.name}</Heading>
-            </Flex>
-          </Panel.Header>
-          <Box bg="#eeeeee" pt={40} px={24}>
+          <Box bg="#f6f6f6" pt={40} px={24}>
             <div style={{ textAlign: "center" }} ref={this.measure}>
               {this.props.children(this.state)}
             </div>
@@ -232,16 +239,16 @@ class Rhyme extends React.Component {
               textAlign="center"
               pt={3}
               pb={4}
-              color="#777"
+              color="#999"
             >
               {this.state.width}
               px
             </Text>
           </Box>
-          <Tabs ml={2}>
+          {/* <Tabs ml={2}>
             <Tab
               onClick={() => this.setState({ activeTab: 0 })}
-              borderColor={this.state.activeTab === 0 ? "blue" : "white"}
+              borderColor={this.state.activeTab === 0 ? "darker" : "white"}
             >
               Knobs
             </Tab>
@@ -251,15 +258,15 @@ class Rhyme extends React.Component {
             >
               Notes
             </Tab>
-          </Tabs>
+          </Tabs> */}
           <Box>
             {this.state.activeTab === 0 &&
               Object.values(this.props.knobs).map(v => this.createKnob(v))}
-            {this.state.activeTab === 1 && (
+            {/* {this.state.activeTab === 1 && (
               <Text py={3} px={2}>
                 {this.props.notes ? this.props.notes : "Add a note!"}
               </Text>
-            )}
+            )} */}
           </Box>
         </Panel>
       </div>

@@ -67,31 +67,20 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
-module.exports = require("react");
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = require("rebass");
-
-/***/ }),
-/* 2 */,
-/* 3 */
+/***/ "./components/Sidebar.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rebass__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rebass__ = __webpack_require__("rebass");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rebass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rebass__);
+var _jsxFileName = "/Users/stephenruiz/GitHub/ds-docs-starter/components/Sidebar.js";
 
 
 
@@ -100,7 +89,11 @@ var Sidebar = function Sidebar() {
     css: {
       height: "100%"
     },
-    mt: "44px"
+    mt: "44px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Introduction",
     links: [{
@@ -115,7 +108,11 @@ var Sidebar = function Sidebar() {
     }, {
       href: "changelog",
       title: "Changelog"
-    }]
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Brand",
     links: [{
@@ -124,8 +121,17 @@ var Sidebar = function Sidebar() {
     }, {
       href: "voice",
       title: "Voice"
-    }]
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListHeading, null, "Foundations"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListHeading, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    }
+  }, "Foundations"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Style",
     links: [{
       href: "colours",
@@ -142,7 +148,11 @@ var Sidebar = function Sidebar() {
     }, {
       href: "logos",
       title: "Logos"
-    }]
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Layout",
     links: [{
@@ -151,8 +161,17 @@ var Sidebar = function Sidebar() {
     }, {
       href: "responsive",
       title: "Responsive"
-    }]
-  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListHeading, null, "Components"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListHeading, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    }
+  }, "Components"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Buttons",
     links: [{
       href: "button",
@@ -160,7 +179,11 @@ var Sidebar = function Sidebar() {
     }, {
       href: "link",
       title: "Link"
-    }]
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Cards",
     links: [{
@@ -175,7 +198,11 @@ var Sidebar = function Sidebar() {
     }, {
       href: "list",
       title: "List"
-    }]
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    }
   }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ListSection, {
     title: "Forms",
     links: [{
@@ -196,16 +223,29 @@ var Sidebar = function Sidebar() {
     }, {
       href: "rangeinput",
       title: "Range input"
-    }]
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    }
   }));
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (Sidebar);
 
 var ListHeading = function ListHeading(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rebass__["Divider"], null), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rebass__["Heading"], {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Fragment, null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rebass__["Divider"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    }
+  }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rebass__["Heading"], {
     fontSize: 3,
-    color: "#333"
+    color: "#333",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    }
   }, props.children));
 };
 
@@ -216,6 +256,10 @@ var SidebarLink = function SidebarLink(_ref) {
     style: {
       padding: "0",
       margin: "12px 0"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rebass__["Link"], {
     href: "/".concat(href),
@@ -223,6 +267,10 @@ var SidebarLink = function SidebarLink(_ref) {
     mr: 16,
     css: {
       textDecoration: "none"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
     }
   }, children));
 };
@@ -233,46 +281,48 @@ var ListSection = function ListSection(props) {
       margin: "44px 0",
       padding: "0",
       listStyle: "none"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
     }
   }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_rebass__["Heading"], {
     fontSize: 2,
-    color: "#333"
+    color: "#333",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    }
   }, props.title), props.links.map(function (l, index) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SidebarLink, {
       key: "SidebarLink_" + index,
-      href: l.href
+      href: l.href,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 106
+      }
     }, l.title);
   }));
 };
 
 /***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(10);
-
-
-/***/ }),
-/* 10 */
+/***/ "./pages/_document.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _Document; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document__ = __webpack_require__("next/document");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_document___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_document__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_config__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_config__ = __webpack_require__("next/config");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_next_config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_next_config__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components__ = __webpack_require__("styled-components");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_styled_components__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Sidebar__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Sidebar__ = __webpack_require__("./components/Sidebar.js");
+var _jsxFileName = "/Users/stephenruiz/GitHub/ds-docs-starter/pages/_document.js";
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -280,6 +330,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -316,8 +368,32 @@ function (_Document2) {
           styleTags = _props.styleTags,
           title = _props.title;
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("html", {
-        lang: "en"
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Head"], null, styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], null), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], null)));
+        lang: "en",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Head"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        }
+      }, styleTags), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("body", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        }
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["Main"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_next_document__["NextScript"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        }
+      })));
     }
   }], [{
     key: "getInitialProps",
@@ -326,7 +402,12 @@ function (_Document2) {
       var sheet = new __WEBPACK_IMPORTED_MODULE_3_styled_components__["ServerStyleSheet"]();
       var page = renderPage(function (App) {
         return function (props) {
-          return sheet.collectStyles(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, props));
+          return sheet.collectStyles(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, _extends({}, props, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 10
+            }
+          })));
         };
       });
       var styleTags = sheet.getStyleElement();
@@ -342,22 +423,49 @@ function (_Document2) {
 
 
 /***/ }),
-/* 11 */
-/***/ (function(module, exports) {
 
-module.exports = require("next/document");
+/***/ 1:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./pages/_document.js");
+
 
 /***/ }),
-/* 12 */
+
+/***/ "next/config":
 /***/ (function(module, exports) {
 
 module.exports = require("next/config");
 
 /***/ }),
-/* 13 */
+
+/***/ "next/document":
+/***/ (function(module, exports) {
+
+module.exports = require("next/document");
+
+/***/ }),
+
+/***/ "react":
+/***/ (function(module, exports) {
+
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "rebass":
+/***/ (function(module, exports) {
+
+module.exports = require("rebass");
+
+/***/ }),
+
+/***/ "styled-components":
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
 
 /***/ })
-/******/ ]);
+
+/******/ });
+//# sourceMappingURL=_document.js.map
