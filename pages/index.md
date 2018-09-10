@@ -1,6 +1,10 @@
 import Layout from '../components/Layout'
 import { Button } from 'rebass'
-import { RhymeA, RhymeB, RhymeC } from "../rhymes"
+import ShortStory from "short-story"
+
+export const meta = {
+title: "hello"
+}
 
 export default Layout
 
@@ -8,24 +12,16 @@ export default Layout
 
 ---
 
-This design system was...
+Welcome to this DsDocs starter project. In the future, this page might include information for a first time visitor to your design system.
 
-Here's an example of all the options available.
+## DsDocs
 
-<RhymeA name="Rhyme A"/>
+DsDocs is a set of tools for documenting design systems.
 
-Here's a more realistic example.
+It lets you:
 
-<RhymeB name="Rhyme B"/>
+- Write pages in markdown
+- Easily insert React components in your markdown pages
+- Customize the navigation, theme and layout
 
-```javascript
-<Button />
-```
-
-And one where responsiveness matters a bit more.
-
-<RhymeC name="Rhyme C"/>
-
-```javascript
-<Text children="Hello world" />
-```
+To learn about using DsDocs, check the [usage](/usage) page.

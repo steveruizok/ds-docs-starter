@@ -1,6 +1,5 @@
 import Layout from '../components/Layout'
 import { Container, Code, Lead, Label, Divider } from 'rebass'
-import CodeBlock from "../components/CodeBlock"
 
 export default Layout
 

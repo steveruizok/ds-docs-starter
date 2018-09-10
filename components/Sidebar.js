@@ -1,15 +1,15 @@
 import React from "react";
 import { Heading, Divider, Link, Container } from "rebass";
 
-const Sidebar = () => (
-  <Container
-    css={{
-      height: "100%"
-    }}
-    mt="44px"
-  >
+const Sidebar = props => (
+  <Container {...props}>
+    <img
+      alt="Logo"
+      style={{ width: "80px", height: "80px" }}
+      src="./static/logo-200x200.png"
+    />
+    <ListHeading>Introduction</ListHeading>
     <ListSection
-      title="Introduction"
       links={[
         { href: "", title: "About" },
         { href: "usage", title: "Usage" },
@@ -70,6 +70,14 @@ const Sidebar = () => (
         { href: "rangeinput", title: "Range input" }
       ]}
     />
+    <Divider />
+    <Container>
+      <p>
+        <a href="#">Github</a>
+      </p>
+      <p>Version 1.0</p>
+      <p>Copyright 2018</p>
+    </Container>
   </Container>
 );
 
@@ -78,7 +86,7 @@ export default Sidebar;
 const ListHeading = props => (
   <>
     <Divider />
-    <Heading fontSize={3} color="#333">
+    <Heading fontSize={3} color="gray8">
       {props.children}
     </Heading>
   </>
@@ -99,9 +107,11 @@ const SidebarLink = ({ href, children }) => (
 
 const ListSection = props => (
   <ul style={{ margin: "44px 0", padding: "0", listStyle: "none" }}>
-    <Heading fontSize={2} color="#333">
-      {props.title}
-    </Heading>
+    {props.title && (
+      <Heading fontSize={2} color="gray9">
+        {props.title}
+      </Heading>
+    )}
     {props.links.map((l, index) => (
       <SidebarLink key={"SidebarLink_" + index} href={l.href}>
         {l.title}
