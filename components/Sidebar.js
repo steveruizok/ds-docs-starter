@@ -6,9 +6,9 @@ const Sidebar = props => (
     <img
       alt="Logo"
       style={{ width: "80px", height: "80px" }}
-      src="./static/logo-200x200.png"
+      src="/static/logo-200x200.png"
     />
-    <ListHeading>Introduction</ListHeading>
+    <Divider />
     <ListSection
       links={[
         { href: "", title: "About" },
@@ -17,6 +17,7 @@ const Sidebar = props => (
         { href: "changelog", title: "Changelog" }
       ]}
     />
+    <ListHeading>Foundations</ListHeading>
     <ListSection
       title="Brand"
       links={[
@@ -24,7 +25,6 @@ const Sidebar = props => (
         { href: "voice", title: "Voice" }
       ]}
     />
-    <ListHeading>Foundations</ListHeading>
     <ListSection
       title="Style"
       links={[
