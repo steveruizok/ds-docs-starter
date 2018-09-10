@@ -1,10 +1,3 @@
-# MDX + Next.js
+# Ds-Docs-Starter
 
-A basic example using imports and custom components.
-
-```sh
-npm install
-npm run dev
-```
-
-[See documentation](https://mdxjs.com/getting-started/next)
+Document design systems with Next.js and MDX.
