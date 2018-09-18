@@ -1,14 +1,16 @@
 import React from "react";
-import { Heading, Divider, Link, Container } from "rebass";
+import { Heading, Text, Box, Divider, Link, Container } from "rebass";
 
-const Sidebar = props => (
+export default props => (
   <Container {...props}>
-    <img
-      alt="Logo"
-      style={{ width: "80px", height: "80px" }}
-      src="/static/logo-200x200.png"
-    />
-    <Divider />
+    <Box mt={0}>
+      <img
+        alt="Logo"
+        style={{ width: "144px" }}
+        src="/static/logos/default.png"
+      />
+      <Text fontSize={1}>Design System v.01</Text>
+    </Box>
     <ListSection
       links={[
         { href: "", title: "About" },
@@ -71,22 +73,19 @@ const Sidebar = props => (
       ]}
     />
     <Divider />
-    <Container>
+    <Box fontSize={1}>
       <p>
         <a href="#">Github</a>
       </p>
-      <p>Version 1.0</p>
       <p>Copyright 2018</p>
-    </Container>
+    </Box>
   </Container>
 );
-
-export default Sidebar;
 
 const ListHeading = props => (
   <>
     <Divider />
-    <Heading fontSize={3} color="gray8">
+    <Heading fontSize={3} color="greyDark">
       {props.children}
     </Heading>
   </>
@@ -108,7 +107,7 @@ const SidebarLink = ({ href, children }) => (
 const ListSection = props => (
   <ul style={{ margin: "44px 0", padding: "0", listStyle: "none" }}>
     {props.title && (
-      <Heading fontSize={2} color="gray9">
+      <Heading fontSize={2} color="greyDark">
         {props.title}
       </Heading>
     )}

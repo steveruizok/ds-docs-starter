@@ -1,26 +1,17 @@
 import React from "react";
-import { Panel, Code, Box } from "rebass";
+import { Card, Code, Box } from "rebass";
 
-const Swatch = ({ cssvariable, bg }) => (
-	<Panel borderColor="#eee">
-		<Box
-			bg={bg}
-			css={{ height: "96px", width: "100%" }}
-			alignItems="flex-end"
-			p={8}
-		/>
-		<Panel.Footer bg="#fafafa">
-			<Code>{bg}</Code>
-		</Panel.Footer>
-		{cssvariable && (
-			<Panel.Footer bg="#fafafa">
-				<Code>
-					--var(
-					{cssvariable})
-				</Code>
-			</Panel.Footer>
-		)}
-	</Panel>
+const Swatch = ({ bg }) => (
+  <Card>
+    <Box
+      bg={bg}
+      css={{ height: "96px", width: "100%" }}
+      alignItems="flex-end"
+      p={8}
+      mb={2}
+    />
+    <Code>{bg}</Code>
+  </Card>
 );
 
 export default Swatch;
